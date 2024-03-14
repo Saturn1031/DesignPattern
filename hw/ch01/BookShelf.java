@@ -28,7 +28,7 @@ public class BookShelf implements Iterable<Book> {
         return new BookShelfIterator(this);
     }
 
-    public Iterator<Book> iteratorBackward() {
+    public Iterator<Book> iteratorBackward() { // 권나래: Iterator 객체 생성 메소드 추가
         return new BookShelfIteratorBackward(this);
     }
 }
