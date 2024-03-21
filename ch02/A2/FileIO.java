@@ -2,6 +2,8 @@ package ch02.A2;
 
 import java.io.IOException;
 
+
+// Target Interface
 public interface FileIO {
     public void readFromFile(String filename) throws IOException;
     public void writeToFile(String filename) throws IOException;
