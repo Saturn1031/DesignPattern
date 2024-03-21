@@ -6,14 +6,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 // 어댑터 (상속을 이용)
-public class FileProperties extends Properties implements FileIO {
+public class FileProperties extends Properties implements FileIO { // 권나래: Properties 클래스를 상속
     public FileProperties() {
         super();
     }
 
     @Override
     public void readFromFile(String filename) throws IOException {
-        load(new FileReader(filename));
+        load(new FileReader(filename)); // 권나래: 자신의 메소드 호출 (위임 X)
     }
 
     @Override
