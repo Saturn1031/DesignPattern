@@ -6,6 +6,9 @@ public class IDCard extends Product {
     private String owner;
 
     IDCard(String owner) {
+        // 부모의 인자 없는 생성자가 자동으로 호출됨
+        // super();
+
         System.out.println(owner + "의 카드를 만듭니다.");
         this.owner = owner;
     }
