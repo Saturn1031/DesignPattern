@@ -8,6 +8,6 @@ public enum Triple {
     }
 
     public static Triple getInstance(String name) {
-        return valueOf(name);
+        return valueOf(name); // 상수 값에 해당하는 Triple 인스턴스 반환
     }
 }

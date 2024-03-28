@@ -6,9 +6,9 @@ import java.util.Map;
 
 public class Triple {
     private static Map<String,Triple> map = new HashMap<>();
-    static {
+    static { // 클래스가 로드될 때 실행되는 부분
         String[] names = { "ALPHA", "BETA", "GAMMA" };
-        Arrays.stream(names).forEach(s -> map.put(s, new Triple(s)));
+        Arrays.stream(names).forEach(s -> map.put(s, new Triple(s))); // Arrays.stream(): 배열을 stream으로 바꿔 줌
     }
 
     private String name;
