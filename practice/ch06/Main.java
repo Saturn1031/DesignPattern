@@ -34,7 +34,7 @@ public class Main {
         manager.register("warning box", mbox);
         manager.register("slash box", sbox);
 
-        // (4) 매니저를 통해서 객체 생성 및 사용
+        // (4) 매니저를 통해서 객체 생성 및 사용 (클래스 이름 사용 없이)
         Product sm = manager.create("strong message");
         sm.use("strong duksung");
 
