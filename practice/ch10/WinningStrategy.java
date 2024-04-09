@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WinningStrategy implements Strategy {
     private Random random; // 난수 생성기
-    private boolean won = false; // 직전 승부
+    private boolean won = false; // 직전 승부 (초기값을 넣지 않으면 자동으로 false로 초기화 됨)
     private Hand prevHand; // 직전에 내민 손
 
     public WinningStrategy(int seed) {

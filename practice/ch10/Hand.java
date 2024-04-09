@@ -1,7 +1,7 @@
 package practice.ch10;
 
-public enum Hand {
-    // 가위 바위 보를 나타내는 세 개의 enum 상수
+public enum Hand { // (클래스)
+    // 가위 바위 보를 나타내는 세 개의 enum 상수 (인스턴스) => 1개만 생성됨
     ROCK("바위", 0),
     SCISSORS("가위", 1),
     PAPER("보", 2);
@@ -38,7 +38,7 @@ public enum Hand {
 
     // 무승부는 0, this가 이기면 1, h가 이기면 -1
     private int fight(Hand h) {
-        if (this == h) {
+        if (this == h) { // 현재 손과 인자로 들어온 손이 동일한 객체이면... (this.handvalue == h.handvalue)
             return 0;
         } else if ((this.handvalue + 1) % 3 == h.handvalue) {
             return 1;
