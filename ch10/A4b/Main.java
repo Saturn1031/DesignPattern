@@ -7,7 +7,11 @@ class Main {
         List<String> list = Arrays.asList("D", "B", "C", "E", "A");
 
         // 사전순으로 작은 순서
-        list.sort((a, b) -> a.compareTo(b));
+        // Comparator 인터페이스: compare() 메소드 한 개만 선언되어 있음
+        // => Functional interface 이라고 함
+        // Functional interface 대신에 람다 함수를 넣을 수 있다.
+
+        list.sort((a, b) -> a.compareTo(b)); // 람다 함수를 넣어줌
         System.out.println(list);
 
         // 사전식 순으로 큰 순서
