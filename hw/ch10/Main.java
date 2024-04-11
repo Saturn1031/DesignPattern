@@ -7,6 +7,7 @@ class Main {
         System.out.println("학번: 20220878 이름: 권나래");
         System.out.println();
 
+        // 권나래: 5개의 학생 객체 생성, List에 저장
         List<Student> list = Arrays.asList(
             new Student("최승훈", "20220878", 190),
             new Student("권나래", "20220878", 150),
@@ -16,12 +17,12 @@ class Main {
         );
 
         System.out.println("** (1) 정렬 결과 (오름차순)");
-        list.sort(new ComparatorAscending());
+        list.sort(new ComparatorAscending()); // 권나래: 오름차순 정렬 Comparator 객체를 인자로 전달
         System.out.println(list);
         System.out.println();
 
-        System.out.println("** (1) 정렬 결과 (내림차순)");
-        list.sort(new ComparatorDesending());
+        System.out.println("** (2) 정렬 결과 (내림차순)");
+        list.sort(new ComparatorDesending()); // 권나래: 내림차순 정렬 Comparator 객체를 인자로 전달
         System.out.println(list);
     }
 }
