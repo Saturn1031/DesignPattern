@@ -26,7 +26,4 @@ public class Student implements Comparable<Student> { // 권나래: Comparable �
     public String toString() { // 권나래: 읽기 좋게 문자열로 출력
         return "(이름: " + name + ", 키: " + height + ")";
     }
-
-    
-    
 }

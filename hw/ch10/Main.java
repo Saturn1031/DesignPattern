@@ -22,7 +22,7 @@ class Main {
         System.out.println();
 
         System.out.println("** (2) 정렬 결과 (내림차순)");
-        list.sort(new ComparatorDesending()); // 권나래: 내림차순 정렬 Comparator 객체를 인자로 전달
+        list.sort(new ComparatorDescending()); // 권나래: 내림차순 정렬 Comparator 객체를 인자로 전달
         System.out.println(list);
     }
 }

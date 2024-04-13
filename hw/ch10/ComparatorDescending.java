@@ -2,7 +2,7 @@ package hw.ch10;
 
 import java.util.Comparator;
 
-public class ComparatorDesending implements Comparator<Student>{ // 권나래: Comparator 인터페이스 구현
+public class ComparatorDescending implements Comparator<Student>{ // 권나래: Comparator 인터페이스 구현
 
     @Override
     public int compare(Student s1, Student s2) {
