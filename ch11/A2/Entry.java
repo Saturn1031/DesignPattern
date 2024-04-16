@@ -1,7 +1,7 @@
 package ch11.A2;
 
 public abstract class Entry {
-    private Entry parent;
+    private Entry parent; // null이 담김
 
     // 부모를 설정한다
     protected void setParent(Entry parent) {
@@ -34,8 +34,8 @@ public abstract class Entry {
         Entry entry = this;
         do {
             fullname.insert(0, entry.getName());
-            fullname.insert(0, "/");
-            entry = entry.parent;
+            fullname.insert(0, "/"); // 맨 앞쪽에 삽입
+            entry = entry.parent; // 부모쪽으로 이동
         } while (entry != null);
         return fullname.toString();
     }

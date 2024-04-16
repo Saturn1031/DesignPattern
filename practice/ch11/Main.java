@@ -9,9 +9,23 @@ public class Main {
         f1.printList();
         f1.printList("c:/docs");
 
+        Entry f2 = new File("h.txt", 200);
+
         // Directory 객체
         Entry d1 = new Directory("bin");
 
         ((Directory) d1).add(f1); // 다운캐스팅
+        ((Directory) d1).add(f2);
+
+        System.out.println(d1.getSize());
+
+        d1.printList();
+
+        Directory root = new Directory("root");
+
+        root.add(d1);
+        root.add(new File("root.txt", 300));
+        root.printList();
+        System.out.println(root.getSize());
     }
 }

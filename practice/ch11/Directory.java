@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Directory extends Entry {
     private String name;
-    private List<Entry> directory = new ArrayList<>();
+    private List<Entry> directory = new ArrayList<>(); // 내용물을 담아둠
 
     public Directory(String name) {
         this.name = name;
@@ -20,7 +20,7 @@ public class Directory extends Entry {
     public int getSize() {
         int size = 0;
         for (Entry entry: directory) {
-            size += entry.getSize();
+            size += entry.getSize(); // 재귀적 호출
         }
         return size;
     }
@@ -29,7 +29,7 @@ public class Directory extends Entry {
     protected void printList(String prefix) {
         System.out.println(prefix + "/" + this);
         for (Entry entry: directory) {
-            entry.printList(prefix + "/" + name);
+            entry.printList(prefix + "/" + name); // 재귀적 호출
         }
     }
 
