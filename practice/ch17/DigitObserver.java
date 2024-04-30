@@ -1,5 +1,6 @@
-package ch17.Sample;
+package practice.ch17;
 
+// 관찰자 1
 public class DigitObserver implements Observer {
     @Override
     public void update(NumberGenerator generator) {
