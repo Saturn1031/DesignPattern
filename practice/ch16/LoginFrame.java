@@ -84,12 +84,12 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
 
     // Colleage의 상태가 바뀌면 호출된다
     @Override
-    public void colleagueChanged() {
+    public void colleagueChanged() { // 통지 받는 메소드
         if (checkGuest.getState()) {
             // 게스트 로그인 
-            textUser.setColleagueEnabled(false);
-            textPass.setColleagueEnabled(false);
-            buttonOk.setColleagueEnabled(true);
+            textUser.setColleagueEnabled(false); // 비활성화
+            textPass.setColleagueEnabled(false); // 비활성화
+            buttonOk.setColleagueEnabled(true); // 활성화
         } else {
             // 사용자 로그인 
             textUser.setColleagueEnabled(true);
@@ -100,21 +100,21 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     // textUser 또는 textPass의 변경이 있다 
     // 각 Colleage의 활성/비활성을 판정한다
     private void userpassChanged() {
-        if (textUser.getText().length() > 0) {
-            textPass.setColleagueEnabled(true);
-            if (textPass.getText().length() > 0) {
+        if (textUser.getText().length() >= 4) { // 사용자 이름이 입력되어 있으면...
+            textPass.setColleagueEnabled(true); // 활성화
+            if (textPass.getText().length() >= 4) {
                 buttonOk.setColleagueEnabled(true);
-            } else {
+            } else { // 비밀번호 입력이 안 되어 있으면...
                 buttonOk.setColleagueEnabled(false);
             }
-        } else {
+        } else { // 사용자 이름이 입력되어 있지 않으면...
             textPass.setColleagueEnabled(false);
             buttonOk.setColleagueEnabled(false);
         }
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { // OK 또는 CANCEL 버튼이 클릭되면 호출됨
         System.out.println(e.toString());
         System.exit(0);
     }
