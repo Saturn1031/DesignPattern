@@ -7,9 +7,9 @@ public class Main {
 
         MultiStringDisplay md = new MultiStringDisplay();
 
-        md.add("학번: 1234567");
-        md.add("이름: 최승훈");
-        md.add("핸드폰 번호: 010-1234-5678");
+        md.add("학번: 20220878");
+        md.add("이름: 권나래");
+        md.add("핸드폰 번호: 010-7566-9407");
 
         Display d1 = new SideBorder(md, '%');
         Display d2 = new FullBorder(d1);
