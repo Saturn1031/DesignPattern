@@ -13,10 +13,10 @@ import javax.swing.JOptionPane;
 public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueCheckbox checkGuest;
     private ColleagueCheckbox checkLogin;
-    private ColleagueCheckbox checkMember;
+    private ColleagueCheckbox checkMember; // 권나래: 멤버 체크박스 추가
     private ColleagueTextField textUser;
     private ColleagueTextField textPass;
-    private ColleagueTextField textRegister;
+    private ColleagueTextField textRegister; // 권나래: 주민등록번호 텍스트 필드 추가
     private ColleagueButton buttonOk;
     private ColleagueButton buttonCancel;
 
@@ -84,7 +84,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         // Mediator를 설정한다 
         checkGuest.setMediator(this);
         checkLogin.setMediator(this);
-        checkMember.setMediator(this);
+        checkMember.setMediator(this); // 권나래: 멤버 체크박스 Mediator 설정
         textUser.setMediator(this);
         textPass.setMediator(this);
         textRegister.setMediator(this); // 권나래: 주민등록번호 입력창 Mediator 설정
@@ -94,7 +94,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         // Listener 설정
         checkGuest.addItemListener(checkGuest);
         checkLogin.addItemListener(checkLogin);
-        checkMember.addItemListener(checkMember);
+        checkMember.addItemListener(checkMember); // 권나래: 멤버 체크박스 리스너 설정
         textUser.addTextListener(textUser);
         textPass.addTextListener(textPass);
         textRegister.addTextListener(textRegister); // 권나래: 주민등록번호 입력창 리스너 설정
