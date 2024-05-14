@@ -25,6 +25,10 @@ public class BigString {
         for (int i = 0; i < bigchars.length; i++) {
             bigchars[i] = factory.getBigChar(string.charAt(i));
         }
+
+        Runtime.getRuntime().gc();
+        long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        System.out.println("공유시 메모리 사용량: " + used);
     }
 
     // 공유하지 않고 초기화 
@@ -33,6 +37,10 @@ public class BigString {
         for (int i = 0; i < bigchars.length; i++) {
             bigchars[i] = new BigChar(string.charAt(i));
         }
+
+        Runtime.getRuntime().gc();
+        long used = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+        System.out.println("비공유시 메모리 사용량: " + used);
     }
 
     // 표시

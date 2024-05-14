@@ -1,8 +1,11 @@
 package practice.ch20;
 
+import java.awt.Color;
+
 public class BigString {
     // '큰 문자'의 배열
     private BigChar[] bigchars; // 배열 선언
+    private Color[] colors;
 
     // 생성자 
     public BigString(String string) {
