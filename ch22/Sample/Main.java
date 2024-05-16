@@ -14,6 +14,10 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
     private DrawCanvas canvas = new DrawCanvas(400, 400, history);
     // 삭제 버튼
     private JButton clearButton  = new JButton("clear");
+    // 색깔 버튼
+    private JButton redButton = new JButton("red");
+    private JButton greenButton = new JButton("green");
+    private JButton blueButton = new JButton("blue");
 
     // 생성자 
     public Main(String title) {
@@ -28,6 +32,10 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);
         buttonBox.add(clearButton);
+        buttonBox.add(redButton);
+        buttonBox.add(greenButton);
+        buttonBox.add(blueButton);
+
         Box mainBox = new Box(BoxLayout.Y_AXIS);
         mainBox.add(buttonBox);
         mainBox.add(canvas);

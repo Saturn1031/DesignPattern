@@ -1,7 +1,8 @@
 package practice.ch22.drawer;
 
-import ch22.Sample.command.Command;
 import java.awt.Point; // 점의 좌표
+
+import practice.ch22.command.Command;
 
 public class DrawCommand implements Command {
     // 그리는 대상 

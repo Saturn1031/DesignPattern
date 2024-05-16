@@ -1,10 +1,10 @@
 package practice.ch22.drawer;
 
-import ch22.Sample.command.MacroCommand;
-
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+
+import practice.ch22.command.MacroCommand;
 
 public class DrawCanvas extends Canvas implements Drawable {
     // 그리는 색 
