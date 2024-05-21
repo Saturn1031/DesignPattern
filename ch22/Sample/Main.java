@@ -26,8 +26,8 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         this.addWindowListener(this);
         canvas.addMouseMotionListener(this);
         clearButton.addActionListener(e -> {
-            history.clear();
-            canvas.repaint();
+            history.clear(); // 히스토리에서 마지막 Command 객체를 삭제
+            canvas.repaint(); // 히스토리를 다시 그림
         });
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);

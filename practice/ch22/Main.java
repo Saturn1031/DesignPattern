@@ -73,15 +73,30 @@ public class Main extends JFrame implements WindowListener {
         });
 
         redButton.addActionListener(e -> {
+            // ColorCommand 생성해서 히스토리에 추가
+            Command cmd = new ColorCommand(canvas, Color.red);
+            history.append(cmd);
 
+            // ColorCommand 실행 (붓의 색깔 바꾸기)
+            cmd.execute();
         });
 
         greenButton.addActionListener(e -> {
+            // ColorCommand 생성해서 히스토리에 추가
+            Command cmd = new ColorCommand(canvas, Color.green);
+            history.append(cmd);
 
+            // ColorCommand 실행 (붓의 색깔 바꾸기)
+            cmd.execute();
         });
 
         blueButton.addActionListener(e -> {
+            // ColorCommand 생성해서 히스토리에 추가
+            Command cmd = new ColorCommand(canvas, Color.blue);
+            history.append(cmd);
 
+            // ColorCommand 실행 (붓의 색깔 바꾸기)
+            cmd.execute();
         });
 
         this.addWindowListener(this);

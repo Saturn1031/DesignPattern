@@ -34,4 +34,9 @@ public class DrawCanvas extends Canvas implements Drawable {
         g.setColor(color);
         g.fillOval(x - radius, y - radius, radius * 2, radius * 2);
     }
+
+    // 붓의 색깔을 설정하는 메소드
+    public void setColor(Color color) {
+        this.color = color;
+    }
 }
