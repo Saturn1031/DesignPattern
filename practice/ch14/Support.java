@@ -15,15 +15,28 @@ public abstract class Support {
         return next;
     }
 
-    // 트러블 해결 절차를 결정한다
+    // 트러블 해결 절차를 결정한다 (템플릿 메소드)
     public void support(Trouble trouble) {
         if (resolve(trouble)) { // 내가 해결했다면...
             done(trouble);
         } else if (next != null) { // 내가 해결 못 하고, 뒷사람이 있다면...
-            next.support(trouble); // 뒷사람에 넘긴다
+            next.support(trouble); // 뒷사람에 넘긴다 (재귀적 호출)
         } else { // 뒷사람이 없으면 (내가 맨 마지막이면)
             fail(trouble);
         }
+
+        // for 루프로 구현
+        /*
+        for (Support obj = this; true; obj = obj.next) {
+            if (obj.resolve(trouble)) {
+                obj.done(trouble);
+                break;
+            } else if (obj.next == null) {
+                obj.fail(trouble);
+                break;
+            }
+        }
+        */
     }
 
     // 트러블 해결자의 문자열 표현
