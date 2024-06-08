@@ -15,8 +15,7 @@ public class PageMaker {
             String naverurl = urlprop.getProperty("naver");
             String googleurl = urlprop.getProperty("google");
             HtmlWriter writer = new HtmlWriter(new FileWriter(filename));
-            writer.title("권나래" + "의 url page");
-            writer.paragraph("Welcome to " + "권나래" + "'s web page!");
+            writer.title("권나래" + "의 URL page");
             writer.link(duksungurl, "duksung");
             writer.link(naverurl, "naver");
             writer.link(googleurl, "google");
